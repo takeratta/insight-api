@@ -23,7 +23,9 @@
   "scripts": {
     "test": "NODE_ENV=test mocha -R spec --recursive",
     "regtest": "mocha -R spec regtest",
-    "perf": "mocha -R spec perf"
+    "perf": "mocha -R spec perf",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "main": "lib",
   "bitcoreNode": "lib",
@@ -33,12 +35,13 @@
     "bcoin": "bcoin-org/bcoin#886008a1822ce1da7fa8395ee7db4bcc1750a28a",
     "bitcore-lib": "5.0.0-beta.1",
     "bitcore-message": "^1.0.1",
-    "body-parser": "^1.13.3",
-    "compression": "^1.6.1",
+    "body-parser": "^1.18.2",
+    "compression": "^1.7.1",
     "lodash": "^2.4.1",
     "lru-cache": "^4.0.1",
-    "morgan": "^1.7.0",
-    "request": "^2.64.0"
+    "morgan": "^1.9.1",
+    "request": "^2.84.0",
+    "snyk": "^1.116.2"
   },
   "devDependencies": {
     "bitcoind-rpc": "^0.7.0",
@@ -50,5 +53,6 @@
     "rimraf": "^2.6.1",
     "should": "^8.3.1",
     "sinon": "^1.10.3"
-  }
+  },
+  "snyk": true
 }
